@@ -32,11 +32,3 @@ This project demonstrates a Student Management System developed using Java. It r
 - Programming Language: Java
 - Development Environment: Any Java IDE or JDK
 
-## How to Run
-Compile the Java files:
-
-    javac *.java
-
-Run the program:
-
-    java Main
