@@ -2,26 +2,41 @@
 # Student Class Implementation
 
 ## Project Description
-This project demonstrates the implementation
-of a Student class using Java.
+This project demonstrates a Student Management System developed using Java. It represents a student class diagram through object-oriented programming concepts.
 
-## Class Attributes
-- Student ID
-- Name
-- Surname
-- Age
-- Department
-- GPA
+## Classes
+- Person: Abstract base class containing common personal information.
+- Student: Represents a student with an ID and GPA.
+- Instructor: Represents an instructor with an ID and department.
+- Course: Represents a university course and its instructor.
+- Enrollment: Connects students with courses and stores their grades.
+- Main: Demonstrates the functionality of the system.
 
-## Methods
-- Getters and Setter
-- displayInfo()
-- isSuccessful()
+## Object-Oriented Programming Concepts
+- Encapsulation
+- Inheritance
+- Abstraction
+- Polymorphism
+- Association
+- Method Overriding
 
-## Main Class
-The Main class creates two Student objects
-and displays their information.
+## Features
+- Create student and instructor objects.
+- Create courses and assign instructors.
+- Enroll students in courses.
+- Assign and display grades.
+- Update student GPA.
+- Display information using polymorphism.
 
 ## Technologies
-- Java
-- Object-Oriented Programming (OOP)
+- Programming Language: Java
+- Development Environment: Any Java IDE or JDK
+
+## How to Run
+Compile the Java files:
+
+    javac *.java
+
+Run the program:
+
+    java Main
