@@ -1,4 +1,3 @@
-
 public class Main {
     public static void main(String[] args) {
 
@@ -46,6 +45,18 @@ public class Main {
         System.out.println("\n=== UPDATED STUDENT GPA ===");
         System.out.println("New GPA: " + student.getGpa());
 
+        System.out.println("\n=== VALIDATION ===");
+        try {
+            enrollment.assignGrade(150);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        try {
+            student.setGpa(5.0);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
         System.out.println("\n=== POLYMORPHISM ===");
 
         Person[] people = {student, instructor};
@@ -56,5 +67,3 @@ public class Main {
         }
     }
 }
-
-
