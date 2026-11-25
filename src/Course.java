@@ -1,10 +1,18 @@
-
 public class Course {
-    private String courseCode;
-    private String courseName;
-    private Instructor instructor;
+    private final String courseCode;
+    private final String courseName;
+    private final Instructor instructor;
 
     public Course(String courseCode, String courseName, Instructor instructor) {
+        if (courseCode == null || courseCode.isBlank()) {
+            throw new IllegalArgumentException("Course code cannot be empty.");
+        }
+        if (courseName == null || courseName.isBlank()) {
+            throw new IllegalArgumentException("Course name cannot be empty.");
+        }
+        if (instructor == null) {
+            throw new IllegalArgumentException("A course must have an instructor.");
+        }
         this.courseCode = courseCode;
         this.courseName = courseName;
         this.instructor = instructor;
