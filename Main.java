@@ -1,30 +1,58 @@
 
 public class Main {
-
     public static void main(String[] args) {
 
-        Student student1 = new Student(
-            1001, "Alex", "Johnson",
-            21, "Computer Engineering", 3.45
+        Instructor instructor = new Instructor(
+            501,
+            "John Smith",
+            "john@university.edu",
+            "Computer Engineering"
         );
 
-        Student student2 = new Student(
-            1002, "Emma", "Brown",
-            22, "Software Engineering", 1.85
+        Student student = new Student(
+            1001,
+            "Alex Brown",
+            "alex@student.edu",
+            3.45
         );
 
-        System.out.println("STUDENT 1");
-        student1.displayInfo();
+        Course course = new Course(
+            "CENG201",
+            "Object Oriented Programming",
+            instructor
+        );
 
-        System.out.println("Successful: " +
-                           student1.isSuccessful());
+        Enrollment enrollment = new Enrollment(student, course);
 
-        System.out.println("\n--------------------\n");
+        System.out.println("=== STUDENT INFORMATION ===");
+        student.displayDetails();
 
-        System.out.println("STUDENT 2");
-        student2.displayInfo();
+        System.out.println("\n=== INSTRUCTOR INFORMATION ===");
+        instructor.displayDetails();
 
-        System.out.println("Successful: " +
-                           student2.isSuccessful());
+        System.out.println("\n=== COURSE INFORMATION ===");
+        course.displayCourse();
+
+        System.out.println("\n=== ENROLLMENT INFORMATION ===");
+        enrollment.displayEnrollment();
+
+        enrollment.assignGrade(92);
+
+        System.out.println("\n=== UPDATED ENROLLMENT ===");
+        enrollment.displayEnrollment();
+
+        student.setGpa(3.70);
+
+        System.out.println("\n=== UPDATED STUDENT GPA ===");
+        System.out.println("New GPA: " + student.getGpa());
+
+        System.out.println("\n=== POLYMORPHISM ===");
+
+        Person[] people = {student, instructor};
+
+        for (Person person : people) {
+            person.displayDetails();
+            System.out.println();
+        }
     }
 }
