@@ -1,9 +1,14 @@
-
 public abstract class Person {
-    private String name;
-    private String email;
+    private final String name;
+    private final String email;
 
     public Person(String name, String email) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Name cannot be empty.");
+        }
+        if (email == null || !email.contains("@")) {
+            throw new IllegalArgumentException("Email must contain '@'.");
+        }
         this.name = name;
         this.email = email;
     }
