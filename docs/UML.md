@@ -1,4 +1,3 @@
-
 # Student Management System - UML Class Diagram
 
 ```mermaid
@@ -7,41 +6,48 @@ classDiagram
         <<abstract>>
         -String name
         -String email
-        +getName()
-        +getEmail()
-        +displayDetails()
+        +getName() String
+        +getEmail() String
+        +displayDetails()* void
     }
 
     class Student {
         -int studentId
         -double gpa
-        +getStudentId()
-        +getGpa()
-        +setGpa()
-        +displayDetails()
+        +getStudentId() int
+        +getGpa() double
+        +setGpa(double) void
+        +displayDetails() void
     }
 
     class Instructor {
         -int instructorId
         -String department
-        +getInstructorId()
-        +getDepartment()
-        +displayDetails()
+        +getInstructorId() int
+        +getDepartment() String
+        +displayDetails() void
     }
 
     class Course {
         -String courseCode
         -String courseName
         -Instructor instructor
-        +displayCourse()
+        +getCourseCode() String
+        +getCourseName() String
+        +getInstructor() Instructor
+        +displayCourse() void
     }
 
     class Enrollment {
         -Student student
         -Course course
-        -double grade
-        +assignGrade()
-        +displayEnrollment()
+        -Double grade
+        +getStudent() Student
+        +getCourse() Course
+        +hasGrade() boolean
+        +getGrade() double
+        +assignGrade(double) void
+        +displayEnrollment() void
     }
 
     Person <|-- Student
