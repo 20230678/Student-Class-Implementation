@@ -1,6 +1,6 @@
 public class Student {
 
-    // Attributes
+
     private int studentId;
     private String name;
     private String surname;
@@ -8,7 +8,7 @@ public class Student {
     private String department;
     private double gpa;
 
-    // Constructor
+ 
     public Student(int studentId, String name, String surname,
                    int age, String department, double gpa) {
         this.studentId = studentId;
@@ -19,7 +19,7 @@ public class Student {
         this.gpa = gpa;
     }
 
-    // Getters
+  
     public int getStudentId() {
         return studentId;
     }
@@ -44,14 +44,14 @@ public class Student {
         return gpa;
     }
 
-    // Setter
+ 
     public void setGpa(double gpa) {
         if (gpa >= 0 && gpa <= 4.0) {
             this.gpa = gpa;
         }
     }
 
-    // Display student information
+   
     public void displayInfo() {
         System.out.println("Student ID: " + studentId);
         System.out.println("Name: " + name + " " + surname);
@@ -60,7 +60,7 @@ public class Student {
         System.out.println("GPA: " + gpa);
     }
 
-    // Check academic performance
+   
     public boolean isSuccessful() {
         return gpa >= 2.0;
     }
