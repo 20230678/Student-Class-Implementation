@@ -4,7 +4,7 @@
 
 The Student-Class Implementation project is a Java-based application developed to demonstrate Object-Oriented Analysis and Design (OOAD) principles.
 
-The main purpose of this project is to model the relationships between students, instructors, courses, and class assignments using object-oriented programming concepts.
+The main purpose of this project is to model the relationships between students, instructors, courses, and enrollments using object-oriented programming concepts.
 
 ## 2. Project Objectives
 
@@ -35,10 +35,10 @@ The project includes the following main classes:
 
 The project demonstrates the following OOP concepts:
 
-- **Encapsulation:** Protecting data through appropriate access modifiers and methods.
+- **Encapsulation:** Private fields, getters, and validation in constructors/setters (invalid values throw `IllegalArgumentException`).
 - **Inheritance:** Reusing common properties through parent and child classes.
 - **Abstraction:** Representing essential characteristics while hiding unnecessary implementation details.
-- **Polymorphism:** Allowing objects to demonstrate different behaviors through shared interfaces or inherited methods.
+- **Polymorphism:** Calling the same method (`displayDetails()`) on different `Person` subclasses (`Student`, `Instructor`) produces different behavior.
 - **Modularity:** Organizing the application into separate classes.
 
 ## 6. Project Structure
@@ -64,9 +64,15 @@ Student-Class-Implementation/
 ## 7. How to Run
 
 1. Clone or download the repository.
-2. Open the project using a Java-compatible IDE.
-3. Locate the `Main.java` file.
-4. Compile and run the application.
+2. Make sure JDK 11 or later is installed.
+3. From the project root, compile and run:
+
+```bash
+javac -d out src/*.java
+java -cp out Main
+```
+
+Alternatively, open the project in a Java IDE and run `Main.java`.
 
 ## 8. UML Design
 
