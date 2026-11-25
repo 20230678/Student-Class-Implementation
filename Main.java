@@ -58,12 +58,3 @@ public class Main {
 }
 
 
-System.out.println("\n=== POLYMORPHISM ===");
-
-Person[] people = {student, instructor};
-
-for (Person person : people) {
-    person.displayDetails();
-    System.out.println();
-}
-
