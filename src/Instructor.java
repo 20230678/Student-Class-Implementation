@@ -1,10 +1,12 @@
-
 public class Instructor extends Person {
-    private int instructorId;
-    private String department;
+    private final int instructorId;
+    private final String department;
 
     public Instructor(int instructorId, String name, String email, String department) {
         super(name, email);
+        if (department == null || department.isBlank()) {
+            throw new IllegalArgumentException("Department cannot be empty.");
+        }
         this.instructorId = instructorId;
         this.department = department;
     }
