@@ -1,12 +1,11 @@
-
 public class Student extends Person {
-    private int studentId;
+    private final int studentId;
     private double gpa;
 
     public Student(int studentId, String name, String email, double gpa) {
         super(name, email);
         this.studentId = studentId;
-        setGpa(gpa);
+        setGpa(gpa); 
     }
 
     public int getStudentId() {
@@ -18,11 +17,10 @@ public class Student extends Person {
     }
 
     public void setGpa(double gpa) {
-        if (gpa >= 0.0 && gpa <= 4.0) {
-            this.gpa = gpa;
-        } else {
-            System.out.println("Invalid GPA. It must be between 0.0 and 4.0.");
+        if (gpa < 0.0 || gpa > 4.0) {
+            throw new IllegalArgumentException("Invalid GPA. It must be between 0.0 and 4.0.");
         }
+        this.gpa = gpa;
     }
 
     @Override
